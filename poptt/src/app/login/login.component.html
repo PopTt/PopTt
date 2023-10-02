@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="dialog-overlay">
+        <div class="upload-form">
+            <form (submit)="submit()" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" [(ngModel)]="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" [(ngModel)]="password" required>
+                </div>
+                <button type="submit" class="upload-button">Login</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #5858c1;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.header img {
+  margin-right: 20px;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+}
+
+.social-links a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.content {
+  padding: 28px;
+}
