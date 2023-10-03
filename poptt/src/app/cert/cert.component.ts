@@ -44,9 +44,9 @@ export class CertComponent implements OnInit {
       formData.append('projectName', this.projectName);
       formData.append('video', this.selectedImage);
 
-      this.apiService.uploadFile(formData, (response) => {
-        console.log(response);
-      });
+      // this.apiService.uploadFile(formData, (response) => {
+      //   console.log(response);
+      // });
       
       this.showUploadForm = false;
       this.projectName = '';

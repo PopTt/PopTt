@@ -6,6 +6,17 @@
     </button>
   </div>
 
+  <div class="projects-list" *ngIf="projects.length > 0">
+    <ul class="video-list">
+        <li *ngFor="let project of projects">
+            <h3>{{ project.name }}</h3>
+            <div>
+                <iframe width="560" height="315" [src]= "embedYouTubeUrl(project.media)" allowfullscreen></iframe>
+            </div>
+        </li>
+    </ul>
+</div>
+
   <div *ngIf="showUploadForm" class="dialog-overlay">
     <div class="upload-form">
       <form (submit)="uploadFiles()" enctype="multipart/form-data">
@@ -15,9 +26,9 @@
         </div>
 
         <div class="form-group">
-          <label for="video">Video (.mp4):</label>
-          <input type="file" id="video" name="video" accept=".mp4" (change)="onVideoSelect($event)" required>
-        </div>
+          <label for="video">Video URL or Path:</label>
+          <input type="text" id="video" name="video" [(ngModel)]="videoUrl" required>
+      </div>
         <button type="submit" class="upload-button">Upload Files</button>
       </form>
     </div>

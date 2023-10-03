@@ -24,6 +24,7 @@ export class LoginComponent {
                     this.password = '';
                     alert("Login Successful.");
                     console.log(response.result.UID);
+                    
                     localStorage.setItem('UID', response.result.UID);
                     this.router.navigate(['/home']);
                 } else {

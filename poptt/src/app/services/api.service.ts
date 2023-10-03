@@ -24,8 +24,18 @@ export class ApiService {
     this.ajaxGet(`${this.baseUrl}/api/user.php`, callback);
   }
 
-  uploadFile(formData: FormData, callback: (response: any) => void): void {
+  getUserDataByUID(UID: number,callback: (response: any) => void): void {
+    this.ajaxGet(`${this.baseUrl}/api/getUserByUID.php?UID=`+ UID, callback);
+  }
+
+  uploadImage(formData: FormData, callback: (response: any) => void): void {
     this.ajaxPostFormData(`${this.baseUrl}/api/uploadImage.php`, formData, callback);
+  }
+
+  uploadProject(name: string, dir: string, UID: number, callback: (response: any) => void): void {
+    const data = JSON.stringify({ name, dir, UID });
+    console.log(data)
+    this.ajaxPost(`${this.baseUrl}/api/uploadProject.php`, data, callback);
   }
 
   logout(callback: (response: any) => void): void {

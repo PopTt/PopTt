@@ -69,3 +69,21 @@
   .upload-button:hover {
     background-color: #0056b3; /* Darker blue on hover */
   }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (change to 75% for 4:3 videos) */
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .video-list {
+    list-style: none;
+  }
