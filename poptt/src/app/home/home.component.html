@@ -22,7 +22,7 @@
       <form (submit)="uploadFiles()" enctype="multipart/form-data">
         <div class="form-group">
           <label for="projectName">Project Name:</label>
-          <input type="text" id="projectName" name="projectName" [(ngModel)]="projectName" required>
+          <input type="text" id="projectName" name="projectName" formControlName="" required>
         </div>
 
         <div class="form-group">
